@@ -10,6 +10,7 @@ const log = log4js.getLogger('supplierService');
 //supplier?? line 8
 
 const getAll = () => {
+    console.error('SERRVICeMaterial');
     log.info(`Get all material of client`);
     const response = materialRepo.getAll();
     return response;

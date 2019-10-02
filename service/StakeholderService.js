@@ -7,14 +7,15 @@ log4js.configure(require('../conf/log4js.json'));
 const log = log4js.getLogger('stakeholderService');
 
 const getAll = () => {
+    console.error('SERRVICStake');
     log.info(`Get all stakeholder of client`);
     const response = stakeholderRepo.getAll();
     return response;
 }
 
-const get = (id) => {
+const get = (ID) => {
     log.info(`Get stakeholder of client`);
-    const response = stakeholderRepo.get(id)
+    const response = stakeholderRepo.get(ID)
     return response;
 }
 
@@ -35,8 +36,8 @@ const stakeholderService = {
     get,
     post,
     put
-}
+};
 
-module.export = {
+module.exports = {
     stakeholderService,
 };

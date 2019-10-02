@@ -10,6 +10,7 @@ log4js.configure(require('../conf/log4js.json'));
 const log = log4js.getLogger('hsCodeService');
 
 const getHsCodes = () => {
+    console.error('SERRVICEhscode');
     log.info(`Get all HS Codes of client`);
     const response = hscodeRepo.getHsCodes();
     return response;

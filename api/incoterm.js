@@ -56,6 +56,7 @@ const postHandler = (req, res) => {
 };
 
 const putHandler = (req, res) => {
+    console.log("bffInc1")
     try {
         incotermService.put(req.body).then(function (result) {
             const json = JSON.stringify(result);

@@ -9,7 +9,7 @@ const { tradeAgreementService } = require('./TradeAgreementService');
 const { materialService } = require('./MaterialService');
 const { materialtypeService } = require('./MaterialTypeService');
 const { mesureService } = require('./MesureService');
-const { bltypeService } = require('./BlTypesService');
+const { bltypeService } = require('./BlTypeService');
 const { stakeholderService } = require('./StakeholderService');
 
 

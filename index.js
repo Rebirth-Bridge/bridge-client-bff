@@ -13,7 +13,7 @@ log4js.configure('./conf/log4js.json');
 const log = log4js.getLogger('startup');
 
 const app = express();
-const port = 8081;
+const port = 8080;
 
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));

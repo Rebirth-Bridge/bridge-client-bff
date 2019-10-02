@@ -15,8 +15,6 @@ module.exports = {
     INCOTERM_ID: '/incoterm/:id',
     BANK: '/bank',
     BANK_ID: '/bank/:id',
-    PAYMENT_TERM: '/paymentterm',
-    PAYMENT_TERM_ID: '/paymentterm/:id',
     TRADE_AGREEMENT: '/tradeagreement',
     TRADE_AGREEMENT_ID: '/tradeagreement/:id',
     MATERIAL: '/material',
@@ -29,6 +27,12 @@ module.exports = {
     STAKEHOLDER: '/stakeHolder',
     Stake_ID : '/stakeHolder/:ID',
 
+    BLTYPE : '/blType',
+    BLTYPE_ID : 'blType/:ID',
+
+
+    PAYMENT_TERM: '/paymentsTerm',
+    PAYMENT_TERM_ID: '/paymentsTerm/:ID',
 
   }
 };

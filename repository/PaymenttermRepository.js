@@ -29,20 +29,20 @@ const getAll = async () => {
         const response = await axios.get(url);
         return response;
     } catch (err) {
-        log.error(`Error occurred while fetching hs code- ${err}`, err);
+        log.error(`Error occurred while fetching Payement Term- ${err}`, err);
         console.error(err);
         throw err;
     }
 };
 
-const get = async (id) => {
-    const url = ENDPOINTS.PAYMENT_TERM.base + '/' + client + ENDPOINTS.PAYMENT_TERM.context + '/' + id;
+const get = async (ID) => {
+    const url = ENDPOINTS.PAYMENT_TERM.base + '/' + client + ENDPOINTS.PAYMENT_TERM.context + '/' + ID;
     try {
         log.info(`Calling ${url}`);
         const response = await axios.get(url);
         return response;
     } catch (err) {
-        log.error(`Error occurred while fetching hs code- ${err}`, err);
+        log.error(`Error occurred while fetching Payement Term- ${err}`, err);
         console.error(err);
         throw err;
     }
@@ -61,7 +61,7 @@ const post = async (body) => {
         })
         return response;
     } catch (err) {
-        log.error(` Error occurred while inserting hs code- ${err}`, err);
+        log.error(` Error occurred while inserting Payement Term- ${err}`, err);
         throw err;
     }
 };
@@ -80,7 +80,7 @@ const put = async (body) => {
         })
         return response;
     } catch (err) {
-        log.error(`Error occurred while updating hs code- ${err}`, err);
+        log.error(`Error occurred while updating Payement Term- ${err}`, err);
         throw err;
     }
 };

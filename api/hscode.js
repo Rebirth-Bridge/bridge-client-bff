@@ -21,8 +21,8 @@ const getHsCodesHandler = (req, res) => {
                 const json = JSON.stringify(error);
                 return res.send(json);
             });
-        } else {
             
+        } else {
             hsCodeService.getHsCodes().then(function(result) {
                 const json = JSON.stringify(result.data);
                 return res.send(json)
@@ -35,6 +35,7 @@ const getHsCodesHandler = (req, res) => {
     } catch (error) {
         const json = JSON.stringify(error);
         return res.status(500).send(json);
+        
     }
 };
 

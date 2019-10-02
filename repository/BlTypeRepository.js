@@ -16,26 +16,33 @@ const log = log4js.getLogger('apiRepository');
 const client = '6e65ad20-d576-43f2-95fa-19daf959070d';
 const username = 'UAT USER';
 
-const getAll = async () => {
-    const url = ENDPOINTS.BLTYPES.base + '/' + client + ENDPOINTS.BLTYPES.context;
+const getblAll = async () => {
+    const url = ENDPOINTS.BLTYPE.base + '/' + client + ENDPOINTS.BLTYPE.context;
+    console.log(url);
     try {
         log.info(`Calling ${url}`);
         const response = await axios.get(url);
+        console.log("getbltyprALL",response)
         return response;
+        
     }
     catch(err) {
         log.error(`Error occurred while fetching B/L Types- ${err}`, err);
         console.error(err);
         throw err;
     }
+
+    
 };
 
-const get = async (id) => {
-    const url = ENDPOINTS.BLTYPES.base + '/' + client + ENDPOINTS.BLTYPES.context + '/' + id;
+const getbl = async (ID) => {
+    const url = ENDPOINTS.BLTYPE.base + '/' + client + ENDPOINTS.BLTYPE.context + '/' + ID;
     try {
         log.info(`Calling ${url}`);
         const response = await axios.get(url);
+        //console.log("getbltypr",response)
         return response;
+
     }
     catch (err) {
         log.error(`Error occured while fetching B/L Types- ${err}`, err);
@@ -44,8 +51,8 @@ const get = async (id) => {
     }
 };
 
-const post = async (body) => {
-    const url = ENDPOINTS.BLTYPES.base + '/' + client + ENDPOINTS.BLTYPES.context;
+const postbl = async (body) => {
+    const url = ENDPOINTS.BLTYPE.base + '/' + client + ENDPOINTS.BLTYPE.context;
     const headers = {
         'Content-Type' : 'application/json',
         'InitiatedBy' :username,
@@ -64,8 +71,8 @@ const post = async (body) => {
     }
 };
 
-const put = async (body) => {
-    const url = ENDPOINTS.BLTYPES.base + '/' + client + ENDPOINTS.BLTYPES.context;
+const putbl = async (body) => {
+    const url = ENDPOINTS.BLTYPE.base + '/' + client + ENDPOINTS.BLTYPE.context;
     const headers = {
         'Content-Type' : 'application/json',
         'InitiatedBy' : username,
@@ -79,14 +86,17 @@ const put = async (body) => {
         return response;
     }
     catch(err) {
-        log.error(`Error occured while updating B/L types- ${url}`, err);
+        console.error(err)
+        log.error(`Error occured while updating B/L types- ${err}`, err);
         throw err;
     }
 };
 
 module.exports = {
-    getAll,
-    get,
-    post,
-    put
+    getblAll,
+
+    
+    getbl,
+    postbl,
+    putbl
 };

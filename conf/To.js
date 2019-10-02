@@ -67,10 +67,7 @@ const BANK = {
   context: "/bank"
 };
 
-const PAYMENT_TERM = {
-  base: "http://localhost:3020",
-  context: "/paymentterm"
-};
+
 
 const TRADE_AGREEMENT = {
   base: "http://localhost:3010",
@@ -97,6 +94,16 @@ const STAKEHOLDER = {
   context : "/stakeHolder"
 }
 
+const BLTYPE = {
+  base : "http://localhost:3010",
+  context : "/blType"
+}
+
+const PAYMENT_TERM = {
+  base: "http://localhost:3010",
+  context: "/paymentsTerm"
+};
+
 
 
 const ENDPOINTS = {
@@ -114,7 +121,8 @@ const ENDPOINTS = {
   MATERIAL,
   MATERIALTYPE,
   MESURE,
-  STAKEHOLDER
+  STAKEHOLDER,
+  BLTYPE
 };
 
 module.exports = {

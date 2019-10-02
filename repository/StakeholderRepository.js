@@ -45,8 +45,8 @@ const getAll = async () => {
 
 
 
-const get = async (id) => {
-    const url = ENDPOINTS.STAKEHOLDER.base + '/' + client + ENDPOINTS.STAKEHOLDER.context + '/' + id;
+const get = async (ID) => {
+    const url = ENDPOINTS.STAKEHOLDER.base + '/' + client + ENDPOINTS.STAKEHOLDER.context + '/' + ID;
     try {
         log.info(`Calling ${url}`);
         const response = await axios.get(url);

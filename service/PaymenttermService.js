@@ -5,10 +5,10 @@ const { paymenttermRepo } = require('../repository');
 const log4js = require('log4js');
 
 log4js.configure(require('../conf/log4js.json'));
-const log = log4js.getLogger('incotermService');
+const log = log4js.getLogger('paymenttermService');
 
 const getAll = () => {
-    log.info(`Get all supplier of client`);
+    log.info(`Get all payment term`);
     const response = paymenttermRepo.getAll();
     return response;
 };

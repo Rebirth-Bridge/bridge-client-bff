@@ -2,9 +2,10 @@ const { createRedisClient, login, makeRequest } = require('./ApiRepository');
 
 const { getHsCodes, getHsCode, putHsCode, postHsCode } = require('./HsCodeRepository');
 
-const approvalsRepo = require('./RegapprovalRepository');
+const { getAll, get, put, post} = require('./StakeholderRepository')
 
-const { getAll, get, put, post} = require('./SupplierRepository');
+
+const approvalsRepo = require('./RegapprovalRepository');
 
 const incotermRepo = require('./IncotermRepository');
 
@@ -24,10 +25,12 @@ const  mesureRepo = require('./MesureRepository');
 
 const stakeholderRepo = require('./StakeholderRepository');
 
-const bltypesRepo = require ('./BlTypesRepository');
+const bltypeRepo = require ('./BlTypeRepository');
 
 const userRepo = { login };
 const hscodeRepo = { getHsCodes, getHsCode, putHsCode, postHsCode };
+
+
 const supplierRepo = { getAll, get, put, post};
 
 module.exports = {
@@ -46,5 +49,5 @@ module.exports = {
   materialTypeRepo,
   mesureRepo,
   stakeholderRepo,
-  bltypesRepo
+  bltypeRepo
 };

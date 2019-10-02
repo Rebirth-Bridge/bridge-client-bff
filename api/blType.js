@@ -1,7 +1,4 @@
-//nishakara
-
-const {
-    stakeholderService } = require('../service/StakeholderService');
+const {bltypeService} = require('../service/BlTypeService');
 const {
     PATHS,
     HTTP_METHODS
@@ -10,34 +7,33 @@ const JSON = require('circular-json');
 const { ERROR_CODES} = require('../conf/ErrorCodes');
 
 
-
 const getHandler = (req, res) => {
-    console.log('stake0')
     try {
-        console.log('stake0.0')
         if (req.params.ID !== null && typeof req.params.ID !== 'undefined') {
-            stakeholderService.get(req.params.ID).then(function (result) {
+            console.log('blIF')
+            bltypeService.getbl(req.params.ID).then(function (result) {
+                //return res.send(json)
                 return res.status(result.status).send(result.data);
+                
             }).catch(function (error) {
-               // return res.send(json)
                 return res.status(ERROR_CODES.INTERNAL_SERVER_ERROR).send(JSON.stringify(error));
+                
             });
 
-            console.error('stake1')
         }
         else {
-            stakeholderService.getAll().then(function (result) {
+            bltypeService.getblAll().then(function (result) {
                 return res.status(result.status).send(result.data);
+            
             }).catch(function (error) {
-                //return res.send(json)
+                console.log(error);
                 return res.status(ERROR_CODES.INTERNAL_SERVER_ERROR).send(JSON.stringify(error));
             });
-            console.error('stake2')
         }
-        console.error('stake3')
     }
 
     catch (error) {
+        console.log(error)
         return res.status(ERROR_CODES.INTERNAL_SERVER_ERROR).send(JSON.stringify(error));
         
     }
@@ -45,11 +41,10 @@ const getHandler = (req, res) => {
     
 };
 
-
 const postHandler = (req, res) => {
 
     try {
-        stakeholderService.post(req.body).then(function (result) {
+        bltypeService.postbl(req.body).then(function (result) {
 
             return res.status(result.status).send(result.data);
 
@@ -65,7 +60,7 @@ const postHandler = (req, res) => {
 
 const putHandler = (req, res) => {
     try {
-        stakeholderService.put(req.body).then(function (result) {
+        bltypeService.putbl(req.body).then(function (result) {
             return res.status(result.status).send(result.data);
 
         }).catch(function (error) {
@@ -76,10 +71,9 @@ const putHandler = (req, res) => {
     }
 };
 
-
 module.exports = {
-    stakeHolder : {
-        [PATHS.STAKEHOLDER] : [{
+    blType : {
+        [PATHS.BLTYPE] : [{
             method : HTTP_METHODS.GET,
             handler :getHandler
         },
@@ -92,9 +86,9 @@ module.exports = {
             handler : putHandler
         }
     ],
-    [PATHS.Stake_ID]: [{
+    [PATHS.BLTYPE_ID]: [{
         method:HTTP_METHODS.GET,
         handler : getHandler
     }]
     }
-};
+}
