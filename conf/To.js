@@ -15,6 +15,11 @@ const AUTH = {
     login: {path: "/login", method: [HTTP_METHODS.POST] } }
 };
 
+const API = {
+  MATERIAL: 'http://localhost:3010',
+  COMPANY: 'http://localhost:3020'
+};
+
 const USER = {
   base: "localhost:8080/auth",
   context: "/users",
@@ -44,12 +49,12 @@ const PAGE = {
 };
 
 const HSCODE = {
-  base: "http://localhost:3010",
+  base: API.MATERIAL,
   context: "/hs"
 };
 
 const REGAPPROVAL = {
-  base: "http://localhost:3010",
+  base: API.MATERIAL,
   context: "/regapproval"
 };
 
@@ -59,48 +64,48 @@ const SUPPLIER = {
 };
 
 const INCOTERM = {
-  base: "http://localhost:3010",
+  base: API.MATERIAL,
   context: "/incoterm"
 };
 const BANK = {
-  base: "http://localhost:3020",
+  base: API.COMPANY,
   context: "/bank"
 };
 
 
 
 const TRADE_AGREEMENT = {
-  base: "http://localhost:3010",
+  base: API.MATERIAL,
   context: "/tradeagreement"
 };
 
 const MATERIAL = {
-  base: "http://localhost:3010",
+  base: API.MATERIAL,
   context: "/material"
 };
 
 const MATERIALTYPE = {
-  base: "http://localhost:3010",
+  base: API.MATERIAL,
   context: "/materialtype"
 };
 
 const MESURE = {
-  base: "http://localhost:3010",
+  base: API.MATERIAL,
   context: "/mesure"
 };
 
 const STAKEHOLDER = {
-  base : "http://localhost:3010",
+  base : API.MATERIAL,
   context : "/stakeHolder"
-}
+};
 
 const BLTYPE = {
-  base : "http://localhost:3010",
+  base : API.MATERIAL,
   context : "/blType"
 }
 
 const PAYMENT_TERM = {
-  base: "http://localhost:3010",
+  base: API.MATERIAL,
   context: "/paymentsTerm"
 };
 
