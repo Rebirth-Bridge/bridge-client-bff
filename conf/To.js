@@ -96,6 +96,7 @@ const STAKEHOLDER = {
 
 const BLTYPE = {
   base : "http://localhost:3010",
+  
   context : "/blType"
 }
 

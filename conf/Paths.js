@@ -28,7 +28,7 @@ module.exports = {
     Stake_ID : '/stakeHolder/:ID',
 
     BLTYPE : '/blType',
-    BLTYPE_ID : 'blType/:ID',
+    BLTYPE_ID : '/blType/:ID',
 
 
     PAYMENT_TERM: '/paymentsTerm',
