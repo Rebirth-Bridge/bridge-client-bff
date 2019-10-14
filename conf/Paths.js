@@ -30,7 +30,6 @@ module.exports = {
     BLTYPE : '/blType',
     BLTYPE_ID : '/blType/:ID',
 
-
     PAYMENT_TERM: '/paymentsTerm',
     PAYMENT_TERM_ID: '/paymentsTerm/:ID',
 

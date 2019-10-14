@@ -9,6 +9,7 @@ const { ERROR_CODES} = require('../conf/ErrorCodes');
 
 const getHandler = (req, res) => {
     try {
+        console.log(req.params.ID);
         if (req.params.ID !== null && typeof req.params.ID !== 'undefined') {
             console.log('blIF')
             bltypeService.getbl(req.params.ID).then(function (result) {
@@ -60,22 +61,32 @@ const postHandler = (req, res) => {
 
 const putHandler = (req, res) => {
     try {
+
+        console.log("api/put1")
         bltypeService.putbl(req.body).then(function (result) {
             return res.status(result.status).send(result.data);
+            
 
         }).catch(function (error) {
+            console.log(error);
             return res.status(ERROR_CODES.INTERNAL_SERVER_ERROR).send(JSON.stringify(error));
         });
+        console.log("api/put2")
     } catch (error) {
+        console.log(error);
         return res.status(ERROR_CODES.INTERNAL_SERVER_ERROR).send(JSON.stringify(error));
     }
+    
+    console.log("api/put3")
 };
 
 module.exports = {
+    
     blType : {
+    
         [PATHS.BLTYPE] : [{
             method : HTTP_METHODS.GET,
-            handler :getHandler
+            handler : getHandler
         },
         {
             method : HTTP_METHODS.POST,
@@ -86,9 +97,13 @@ module.exports = {
             handler : putHandler
         }
     ],
-    [PATHS.BLTYPE_ID]: [{
-        method:HTTP_METHODS.GET,
-        handler : getHandler
-    }]
-    }
+        [PATHS.BLTYPE_ID] : [{
+            method  : HTTP_METHODS.GET,
+            handler : getHandler
+         },
+        
+        
+    ],
+    
+}
 }

@@ -26,9 +26,16 @@ const postbl = (body) => {
     return response;
 }
 
+// const putbl = (body) => {
+//     log.info(`Put B/l Types to ${body}`);
+//     const response = bltypeRepo.putbl(body)
+//     return response;
+// }
+
 const putbl = (body) => {
-    log.info(`Put B/l Types to ${body}`);
+    log.info(`Put B/l types to ${body}`);
     const response = bltypeRepo.putbl(body)
+    console.log("putservice");
     return response;
 }
 

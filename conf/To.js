@@ -44,12 +44,12 @@ const PAGE = {
 };
 
 const HSCODE = {
-  base: "http://localhost:3010",
+  base: "http://192.168.8.188:3010",
   context: "/hs"
 };
 
 const REGAPPROVAL = {
-  base: "http://localhost:3010",
+  base: "http://192.168.8.188:3010",
   context: "/regapproval"
 };
 
@@ -59,7 +59,7 @@ const SUPPLIER = {
 };
 
 const INCOTERM = {
-  base: "http://localhost:3010",
+  base: "http://192.168.8.188:3010",
   context: "/incoterm"
 };
 const BANK = {
@@ -70,38 +70,37 @@ const BANK = {
 
 
 const TRADE_AGREEMENT = {
-  base: "http://localhost:3010",
+  base: "http://192.168.8.188:3010",
   context: "/tradeagreement"
 };
 
 const MATERIAL = {
-  base: "http://localhost:3010",
+  base: "http://192.168.8.188:3010",
   context: "/material"
 };
 
 const MATERIALTYPE = {
-  base: "http://localhost:3010",
+  base: "http://192.168.8.188:3010",
   context: "/materialtype"
 };
 
 const MESURE = {
-  base: "http://localhost:3010",
+  base: "http://192.168.8.188:3010",
   context: "/mesure"
 };
 
 const STAKEHOLDER = {
-  base : "http://localhost:3010",
+  base : "http://192.168.8.188:3010",
   context : "/stakeHolder"
 }
 
 const BLTYPE = {
-  base : "http://localhost:3010",
-  
+  base : "http://192.168.8.188:3010",  
   context : "/blType"
 }
 
 const PAYMENT_TERM = {
-  base: "http://localhost:3010",
+  base: "http://192.168.8.188:3010",
   context: "/paymentsTerm"
 };
 
@@ -125,6 +124,7 @@ const ENDPOINTS = {
   STAKEHOLDER,
   BLTYPE
 };
+
 
 module.exports = {
   ENDPOINTS, HTTP_METHODS
